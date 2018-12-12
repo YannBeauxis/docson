@@ -18,7 +18,7 @@ var docson = docson || {};
 
 docson.templateBaseUrl="templates";
 
-define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib/marked", 
+define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib/marked",
     "lib/URI",
     "lib/traverse"], function(jquery, handlebars, highlight, jsonpointer, marked, URI) {
 
@@ -247,7 +247,7 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
         try {
             return jsonpointer.get(stack[1], ref);
         } catch(e) {
-            console.log(e);
+            // console.log(e);
             return null;
         }
     }
@@ -335,7 +335,7 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
     });
 
     Handlebars.registerHelper('l', function(context) {
-        console.log(context);
+        // console.log(context);
     });
 
     function init() {
@@ -511,7 +511,7 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
                     get_document(segment[0]).then(function(schema) {
                     })
 
-                    
+
                     // Fetch external schema
 
                         var external = false;
@@ -548,7 +548,7 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
                                                 : jsonpointer.get(content, segments[1]);
                                     refs[item] = jsonpointer.get(content, segments[1]);
                                     renderBox();
-                                    resolveRefsReentrant(content); 
+                                    resolveRefsReentrant(content);
                                 }
                             });
                         }
@@ -593,10 +593,10 @@ define(["lib/jquery", "lib/handlebars", "lib/highlight", "lib/jsonpointer", "lib
 
                 });
             };
-            
+
             resolveRefsReentrant(schema);
             renderBox();
-            
+
             d.resolve();
         })
         return d.promise();

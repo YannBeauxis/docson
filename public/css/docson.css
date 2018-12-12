@@ -18,6 +18,8 @@
     font-family: 'Droid Sans',verdana,helvetica;
     font-size: 13px;
     padding: 6px 6px 6px 6px;
+    width: 90% !important;
+    height: 90% !important;
 }
 
 .docson .box {
@@ -477,4 +479,3 @@
     color: #080;
     font-style: italic;
 }
-

@@ -3725,10 +3725,10 @@ __webpack_require__(323);
 
 __webpack_require__(324);
 
-if (global._babelPolyfill) {
-  throw new Error("only one instance of babel-polyfill is allowed");
-}
-global._babelPolyfill = true;
+// if (global._babelPolyfill) {
+//   throw new Error("only one instance of babel-polyfill is allowed");
+// }
+global._babelPolyfill = false;
 
 var DEFINE_PROPERTY = "defineProperty";
 function define(O, key, value) {
@@ -9100,7 +9100,7 @@ if (script.attributes["data-schema"]) {
                 frame.height = event.data.height + 18;
             }
             if (event.data.action == "ready") {
-                console.log(frame.parentNode);
+                // console.log(frame.parentNode);
                 frame.contentWindow.postMessage({ id: "docson", font: window.getComputedStyle(frame.parentNode).fontFamily }, "*");
             }
         }
